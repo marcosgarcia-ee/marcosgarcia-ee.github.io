@@ -1,20 +1,163 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Marcos Garcia Portfolio</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Garcia | EE Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fb;
+            color: #1f2937;
+        }
+
+        header {
+            background-color: #111827;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #cbd5e1;
+        }
+
+        nav {
+            background-color: #1f2937;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            border-left: 5px solid #2563eb;
+            padding-left: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #111827;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
     <h1>Marcos Garcia</h1>
-    <p>Electrical Engineering Student</p>
+    <p>Electrical Engineering Student | Embedded Systems | Arduino & ESP32</p>
+</header>
 
-    <h2>Projects</h2>
-    <p>ESP32 WiFi Relay Controller</p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <h2>Skills</h2>
-    <p>C, Embedded Systems, Arduino, ESP32</p>
+<div class="container">
 
-    <h2>Contact</h2>
-    <p>Email: gvmarcos20@gmail.com</p>
-    <p>School Email: mzg@uwm.edu</p>
-  </body>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+                I am an Electrical Engineering student at UWM interested in embedded systems,
+                microcontrollers, and hardware programming. I enjoy building real-world systems
+                using Arduino and ESP32 platforms.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>ESP32 Smart Room Hub</h3>
+            <p>
+                WiFi-enabled embedded system designed to monitor and control room devices
+                using an ESP32 WROOM module.
+            </p>
+            <p><strong>Tech:</strong> ESP32, C++, WiFi</p>
+        </div>
+
+        <div class="card">
+            <h3>Arduino Uno R4 WiFi LED Control</h3>
+            <p>
+                Simple IoT-style project to control LEDs through a web interface using Arduino Uno R4 WiFi.
+            </p>
+            <p><strong>Tech:</strong> Arduino, C++, Web Server</p>
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="card">
+            <p>C / C++ (Arduino)</p>
+            <p>Embedded Systems</p>
+            <p>Digital Logic Design</p>
+            <p>Git & GitHub</p>
+            <p>Basic Networking (WiFi modules)</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email: your-email@example.com</p>
+            <p>GitHub: github.com/marcosgarcia-ee</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Marcos Garcia</p>
+</footer>
+
+</body>
 </html>
