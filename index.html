@@ -3,161 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Marcos Garcia | EE Portfolio</title>
 
     <style>
-        body {
+
+        * {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f7fb;
-            color: #1f2937;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        header {
-            background-color: #111827;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
             color: white;
-            padding: 3rem 1rem;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
             text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to right, #111827, #1e293b);
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
         header p {
-            margin-top: 10px;
             color: #cbd5e1;
+            font-size: 1.1rem;
         }
 
+        /* NAVIGATION */
+
         nav {
-            background-color: #1f2937;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             padding: 1rem;
+            background: #111827;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #60a5fa;
         }
+
+        /* MAIN GRID */
 
         .container {
-            max-width: 1000px;
-            margin: auto;
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* WINDOW STYLE */
+
+        .window {
+            background: #1e293b;
+            border-radius: 16px;
             padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
         }
 
-        section {
-            margin-bottom: 2.5rem;
+        .window:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        h2 {
-            border-left: 5px solid #2563eb;
-            padding-left: 10px;
+        .window h2 {
             margin-bottom: 1rem;
+            color: #60a5fa;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
         }
 
-        .card {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
+        .project {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #0f172a;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
-        .card h3 {
-            margin-top: 0;
+        .project h3 {
+            margin-bottom: 10px;
+            color: #93c5fd;
+        }
+
+        ul {
+            margin-left: 20px;
         }
 
         footer {
             text-align: center;
             padding: 2rem;
-            background: #111827;
-            color: white;
-            margin-top: 2rem;
+            color: #94a3b8;
         }
+
+        /* BUTTONS */
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Marcos Garcia</h1>
-    <p>Electrical Engineering Student | Embedded Systems | Arduino & ESP32</p>
-</header>
+    <header>
+        <h1>Marcos Garcia</h1>
+        <p>Electrical Engineering Student | Embedded Systems | Arduino & ESP32</p>
+    </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<div class="container">
+    <div class="container">
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
+        <!-- ABOUT WINDOW -->
+
+        <section class="window" id="about">
+            <h2>About Me</h2>
+
             <p>
-                I am an Electrical Engineering student at UWM interested in embedded systems,
-                microcontrollers, and hardware programming. I enjoy building real-world systems
-                using Arduino and ESP32 platforms.
+                I am an Electrical Engineering student at UWM focused on embedded systems,
+                microcontrollers, and hardware programming.
             </p>
-        </div>
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+            <br>
 
-        <div class="card">
-            <h3>ESP32 Smart Room Hub</h3>
             <p>
-                WiFi-enabled embedded system designed to monitor and control room devices
-                using an ESP32 WROOM module.
+                I enjoy building projects using Arduino and ESP32 platforms
+                while improving my software and hardware engineering skills.
             </p>
-            <p><strong>Tech:</strong> ESP32, C++, WiFi</p>
-        </div>
+        </section>
 
-        <div class="card">
-            <h3>Arduino Uno R4 WiFi LED Control</h3>
-            <p>
-                Simple IoT-style project to control LEDs through a web interface using Arduino Uno R4 WiFi.
-            </p>
-            <p><strong>Tech:</strong> Arduino, C++, Web Server</p>
-        </div>
+        <!-- PROJECTS WINDOW -->
 
-    </section>
+        <section class="window" id="projects">
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="card">
-            <p>C / C++ (Arduino)</p>
-            <p>Embedded Systems</p>
-            <p>Digital Logic Design</p>
-            <p>Git & GitHub</p>
-            <p>Basic Networking (WiFi modules)</p>
-        </div>
-    </section>
+            <h2>Projects</h2>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="card">
+            <div class="project">
+                <h3>ESP32 Smart Room Hub</h3>
+
+                <p>
+                    WiFi-enabled embedded system designed to monitor and control
+                    room devices remotely.
+                </p>
+
+                <br>
+
+                <strong>Tech:</strong> ESP32, C++, WiFi
+            </div>
+
+            <div class="project">
+                <h3>Arduino Uno R4 WiFi LED Control</h3>
+
+                <p>
+                    IoT-style LED controller with a browser-based interface.
+                </p>
+
+                <br>
+
+                <strong>Tech:</strong> Arduino, Web Server
+            </div>
+
+        </section>
+
+        <!-- SKILLS WINDOW -->
+
+        <section class="window" id="skills">
+
+            <h2>Skills</h2>
+
+            <ul>
+                <li>C / C++ (Arduino)</li>
+                <li>Embedded Systems</li>
+                <li>ESP32 Development</li>
+                <li>Digital Logic Design</li>
+                <li>Git & GitHub</li>
+                <li>Basic Networking</li>
+            </ul>
+
+        </section>
+
+        <!-- CONTACT WINDOW -->
+
+        <section class="window" id="contact">
+
+            <h2>Contact</h2>
+
             <p>Email: your-email@example.com</p>
+
+            <br>
+
             <p>GitHub: github.com/marcosgarcia-ee</p>
-        </div>
-    </section>
 
-</div>
+            <a class="button" href="https://github.com/marcosgarcia-ee">
+                View GitHub
+            </a>
 
-<footer>
-    <p>© 2026 Marcos Garcia</p>
-</footer>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Marcos Garcia</p>
+    </footer>
 
 </body>
 </html>
